@@ -1,5 +1,5 @@
 class PackageordersController < ApplicationController
-	before_action :logged_in_user, only: [:index, :create, :update, :new, :show]
+	before_action :logged_in_user, only: [:index, :create, :edit, :update, :new, :show]
 	before_action :admin_user, only: :destroy
 
   	def index
@@ -27,6 +27,20 @@ class PackageordersController < ApplicationController
     		Packageorder.find(params[:id]).destroy
         redirect_to packageorders_path
     	end
+
+      def edit
+        @packageorder = Packageorder.find(params[:id])
+      end
+
+      def update
+        @packageorder = Packageorder.find(params[:id])
+        if @packageorder.update_attributes(packageorder_params)
+          flash[:success] = "编辑成功"
+          redirect_to root_url
+        else
+          render 'edit'
+        end
+      end
 
 
     	private

@@ -1,5 +1,5 @@
 class FitordersController < ApplicationController
-	before_action :logged_in_user, only: [:index, :create, :update, :new, :show]
+	before_action :logged_in_user, only: [:index, :create, :edit, :update, :new, :show]
 	before_action :admin_user, only: :destroy
 
 	def index
@@ -27,6 +27,20 @@ class FitordersController < ApplicationController
   		Fitorder.find(params[:id]).destroy
       redirect_to fitorders_path
   	end
+
+      def edit
+        @fitorder = Fitorder.find(params[:id])
+      end
+
+      def update
+        @fitorder = Fitorder.find(params[:id])
+        if @fitorder.update_attributes(fitorder_params)
+          flash[:success] = "编辑成功"
+          redirect_to root_url
+        else
+          render 'edit'
+        end
+      end
 
   	private
 	  	def fitorder_params
