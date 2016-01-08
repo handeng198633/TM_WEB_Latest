@@ -49,8 +49,9 @@
 
 		<% if logged_in? %>
 			<%= render 'layouts/nav' %>
-		    
+		    <div id="content">
 			<%= yield %>
+			</div>
 		    
 			<%= render 'layouts/footer' %>
 		<% else %>

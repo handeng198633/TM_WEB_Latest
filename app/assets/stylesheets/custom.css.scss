@@ -76,10 +76,11 @@ input {
   position: relative;
   min-height:100%;
   width: auto;
+  margin: 99px;
 }
 #content-header {
   position: abslute;
-  width: 100%;
+  width: auto;
   margin-top: 5px;
   z-index: 20;
 }
@@ -110,6 +111,13 @@ input {
   top: -7px;
 }
 
+.container-fluid{
+  width: auto;
+}
 .container-fluid .row-fluid:first-child {
-  margin-top: 79px;
+  margin-top: 0px;
+}
+
+.widget-title{
+  float: left; 
 }

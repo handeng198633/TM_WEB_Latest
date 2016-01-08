@@ -32,11 +32,15 @@ class PackageordersController < ApplicationController
         @packageorder = Packageorder.find(params[:id])
       end
 
+      def show
+        @packageorder = Packageorder.find(params[:id])
+      end
+
       def update
         @packageorder = Packageorder.find(params[:id])
         if @packageorder.update_attributes(packageorder_params)
           flash[:success] = "编辑成功"
-          redirect_to root_url
+          redirect_to packageorders_path
         else
           render 'edit'
         end
