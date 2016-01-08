@@ -1,0 +1,41 @@
+
+<div class="nav">
+    <div class="m-div clear">
+       
+        <a class="fl log">
+        <div class="fl menu" style="margin-left: 40px;">
+            <%= link_to '忆游假日在线CMS', root_path, class: "fl menu-btn menu-btn-fire"%>
+            
+            <div class="menu-drop">
+                <a class="close" href="./忆游假期.html"></a>
+                <a class="btn" href="">公司简介</a>
+             
+                <div class="tips">关于忆游假期</div>
+            </div>
+        </div>
+        <% if logged_in? && current_user.id == 1 %>
+                <% flash.each do |key, value| %>
+                        <div class="alert alert-<%= key %>"><%= value %></div>
+                <% end %>
+                <div id="user-static-info-div" class="fr menu2">    
+                    <a class="fl menu-btn menu-btn-fire border-radius-2" href="/signup">注册</a>
+
+                    <%= link_to "密码更新", edit_user_path(current_user), class: "fl menu-btn menu-btn-fire border-radius-2" %>
+
+                    <%= link_to "退出", logout_path, method: "delete", class: "fl menu-btn menu-btn-fire border-radius-2" %>
+                </div>
+                
+        <% elsif logged_in? %>
+                <% flash.each do |key, value| %>
+                        <div class="alert alert-<%= key %>"><%= value %></div>
+                <% end %>
+
+                    <%= link_to "密码更新", edit_user_path(current_user), class: "fl menu-btn menu-btn-fire border-radius-2" %>
+
+                    <%= link_to "退出", logout_path, method: "delete", class: "fl menu-btn menu-btn-fire border-radius-2" %>
+                </div>
+        <% end %>
+
+    </div>
+       
+</div>

@@ -1,0 +1,95 @@
+<% provide(:title, "旅行团统计") %>
+
+<div id="content">
+  <div id="content-header">
+      <h1>新增统计</h1>
+  </div>
+  <div class="container-fluid">
+  	  <div class="row-fluid">
+	  	  		<div class="span6">
+	  	  			<div class="widget-box">
+	  	  				<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          					<h5>请依次输入具体信息</h5>
+        				</div>
+        				<div class="widget-content">
+        					<%= form_for(Finance.new) do |f| %>
+        						<%= render 'shared/error_messages', object: f.object %>
+	        						<div class="control-group">
+	              						<%= f.label :out_date, "出发日期" %>
+	              						<div class="controls">
+	              							<div class="input-append date datepicker">
+	                							<%= f.date_field :out_date %>
+	                						</div>
+	              						</div>
+
+	              						<%= f.label :package_date, "完团日期" %>
+	              						<div class="controls">
+	              							<div class="input-append date datepicker">
+	                							<%= f.date_field :package_date %>
+	                						</div>
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :content, "行程" %>
+	              						<div class="controls">
+	                							<%= f.text_field :content, placeholder: "请输入行程。。。", class: "span11" %>
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :travel_agency, "组团社" %>
+	              						<div class="controls">
+	                							<%= f.text_field :travel_agency, placeholder: "组团社信息。。。", class: "span11" %>
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :person_number, "人数" %>
+	              						<div class="controls">
+	                							<%= f.number_field(:person_number, in: 0.0..10000.0, step: 1.0 ) %>
+												<span class="add-on">人</span>	                							
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :price4_person, "单价" %>
+	              						<div class="controls">
+	                							<%= f.number_field(:price4_person, in: 0.0..500000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>	                							
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :should, "应收金额" %>
+	              						<div class="controls">
+	                							<%= f.number_field(:should, in: 0.0..1000000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>	                							
+	              						</div>
+	              						<%= f.label :received, "实收金额" %>
+	              						<div class="controls">
+	                							<%= f.number_field(:received, in: 0.0..1000000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>	                							
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :remark, "备注" %>
+	              						<div class="controls">
+	                							<%= f.text_field :remark, placeholder: "备注信息。。。", class: "span11" %>
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.submit "保存", data: { confirm: "确定？" }, class: "btn btn-large btn-primary" %>
+										<%= link_to "退出", finances_path, class: "btn btn-large btn-primary" %>
+	            					</div>	            					
+
+        					<% end %>
+        				</div>
+	  	  			</div>
+	  	  		</div>
+  	  </div>
+  </div>
+</div>
+

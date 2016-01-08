@@ -1,0 +1,74 @@
+
+<% provide(:title, "新增净利润表") %>
+
+<div id="content">
+  <div id="content-header">
+      <h1>新增净利润表</h1>
+  </div>
+  <div class="container-fluid">
+  	  <div class="row-fluid">
+	  	  		<div class="span6">
+	  	  			<div class="widget-box">
+	  	  				<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          					<h5>请依次输入具体信息</h5>
+        				</div>
+        				<div class="widget-content">
+							<%= form_for(Netprofit.new) do |f| %>
+								<%= render 'shared/error_messages', object: f.object %>
+
+	            					<div class="control-group">
+	              						<%= f.label :month, "月份" %>
+	              						<div class="controlsq">
+	              							<div class="input-append date datepicker">
+	                							<%= f.month_field :month %>
+	                						</div>
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :total_income, "收入合计" %>
+	              						<div class="controls span4">
+	                							<%= f.number_field(:total_income, in: 0.0..100000000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>
+	              						</div>
+	              						<%= f.label :total_coat, "支出合计" %>
+	              						<div class="controls span4">
+	                							<%= f.number_field(:total_coat, in: 0.0..100000000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>
+	              						</div>
+	              						<%= f.label :profit, "利润" %>
+	              						<div class="controls span4">
+	                							<%= f.number_field(:profit, in: 0.0..100000000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>
+	              						</div>
+	              						<%= f.label :fax, "税" %>
+	              						<div class="controls span4">
+	                							<%= f.number_field(:fax, in: 0.0..100000000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>
+	              						</div>
+	              						<%= f.label :net_profit, "净利润" %>
+	              						<div class="controls span4">
+	                							<%= f.number_field(:net_profit, in: 0.0..100000000.0, step: 1.0 ) %>
+												<span class="add-on">RMB</span>
+	              						</div>
+	            					</div>
+
+	            					<div class="control-group">
+	              						<%= f.label :status, "状态"%>
+	              						<div class="controls span6">
+	                							<%= f.select(:status, [['是', true], ['否', false ]]) %>
+	              						</div>
+	            					</div>
+
+									<div class="control-group">
+	              						<%= f.submit "保存", data: { confirm: "确定？" }, class: "btn btn-large btn-primary" %>
+										<%= link_to "退出", fitorders_path, class: "btn btn-large btn-primary" %>
+	            					</div>	            					
+
+        					<% end %>
+        				</div>
+	  	  			</div>
+	  	  		</div>
+  	  </div>
+  </div>
+</div>

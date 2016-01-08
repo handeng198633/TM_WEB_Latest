@@ -1,0 +1,50 @@
+<% provide(:title, "飞机票订单") %>
+
+<div id="content-header">
+  <h1>飞机票订单</h1>
+</div>
+<div class="content-fluid" style="margin: 79px;">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"><span class="icon"> <i class="icon-briefcase"></i> </span>
+                    <%= link_to "新增", new_planeticket_path, class: "btn btn-primary" %>
+                  </div>
+                    <div class="widget-content">
+                        <div class="row-fluid">
+                              <table id="planetickets" class="display" data-source="<%= planetickets_url(:format => "json") %>">
+                                  <thead>
+                                    <tr>
+                                      <th>ID</th>
+                                      <th>类别</th>
+                                      <th>订单ID</th>
+                                      <th>小团号</th>
+                                      <th>出发日期</th>
+                                      <th>行程</th>
+                                      <th>联运</th>
+                                      <th>出票日期</th>
+                                      <th>出票地</th>
+                                      <th>游客姓名</th>
+                                      <th>证件号码</th>
+                                      <th>有效期</th>
+                                      <th>出生日期</th>
+                                      <th>票面</th>
+                                      <th>手续费</th>
+                                      <th>航班</th>
+                                      <th>备注</th>
+                                      <th>报票人</th>
+                                      <th>报票备注</th>
+                                      <th>票况</th>      
+                                      <th>具体状态</th>
+                                      <th>操作</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                  </tbody>
+                                </table>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,44 @@
+<% provide(:title, "散客订单") %>
+
+<div id="content-header">
+  <h1>散客订单</h1>
+</div>
+
+<div class="content-fluid" style="margin: 79px;">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"><%= link_to "新增", new_fitorder_path, class: "btn btn-primary" %>
+            </div>
+        <div class="widget-content nopadding">
+                <table id="fitorders" class="display" data-source="<%= fitorders_url(:format => "json") %>">
+                  <thead>
+                    <tr>
+                      <th>订单编号</th>
+                      <th>团号</th>
+                      <th>出发日期</th>
+                      <th>地接日期</th>
+                      <th>订购方</th>
+                      <th>出团通知</th>
+                      <th>人数[名单]</th>
+                      <th>接</th>
+                      <th>送</th>
+                      <th>收客价/地接价</th>
+                      <th>西藏结算价 | 当地成本</th>
+                      <th>客人信息</th>
+                      <th>备注</th>
+                      <th>接受人</th>
+                      <th>当前已收款</th>
+                      <th>状态</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
