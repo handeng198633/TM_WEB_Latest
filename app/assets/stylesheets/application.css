@@ -11,20 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
- *= require jquery-ui
- *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
  *= require_self
+ *= require bootstrap
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 
  * head css
- *= require reset
- *= require index
- *= require uploadify
- *= require easyui
  *= require simple_calendar
- *= require style2.css
- */
-
- /*
- *= require dataTables/src/demo_table_jui
-*/
+ *= require select2
+ *= require style2
 

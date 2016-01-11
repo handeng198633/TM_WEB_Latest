@@ -1,50 +1,71 @@
-<div id="user-nav" class="navbar navbar-inverse">
-    <ul class="nav">
-        <% if logged_in? && current_user.id == 1 %>
-            <li  class="" id="profile-messages" >
-                <a>
-                    <i class="icon icon-user"></i>&nbsp;
-                    <span class="text">欢迎你，<%= current_user.name %></span>&nbsp;
+<header class="main-header">
+        <!-- Logo -->
+        <a href="" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg">亿游在线</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <% if logged_in? && current_user.id == 1 %>
+                   <li>
+                    <a href='/signup' data-toggle="control-sidebar">
+                      <i class="fa fa-user-plus"></i>
+                      <span class="label label-success"></span>
+                    </a>
+                  </li>
+
+              <% elsif logged_in? %>
+                  
+              <% end %>
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src='/assets/User.jpg' class="user-image" alt="User Image">
+                  <span class="hidden-xs"><%= current_user.name %></span>
                 </a>
-                <li class="">
-                    <%= link_to '/signup' do %>
-                        <i class="icon icon-key"></i> 
-                        <span class="text">&nbsp;注册</span>
-                    <% end %>
-                </li>
-                <li class="">
-                    <%= link_to edit_user_path(current_user) do %>
-                        <i class="icon icon-cog"></i> 
-                        <span class="text">&nbsp;设置</span>
-                    <% end %>
-                </li>
-                <li class="">
-                    <%= link_to logout_path, method: "delete", confirm: "确定退出?"  do %>
-                     <i class="icon icon-share-alt"></i> 
-                     <span class="">&nbsp;退出</span>
-                    <% end %>
-                </li>
-            </li>
-                
-        <% elsif logged_in? %>
-            <li  class="" id="profile-messages" >
-               <a>
-                    <i class="icon icon-user"></i>&nbsp;
-                    <span class="text">欢迎你，<%= current_user.name %></span>&nbsp;
-                </a>
-                <li class="">
-                    <%= link_to edit_user_path(current_user) do %>
-                        <i class="icon icon-cog"></i> 
-                        <span class="text">&nbsp;设置</span>
-                    <% end %>
-                </li>
-                <li class="">
-                    <%= link_to logout_path, method: "delete", confirm: "确定退出?"  do %>
-                     <i class="icon icon-share-alt"></i> 
-                     <span class="">&nbsp;退出</span>
-                    <% end %>
-                </li>
-            </li>
-        <% end %>
-    </ul>
-</div>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src='/assets/User.jpg' class="img-circle" alt="User Image">
+                    <p>
+                      Oliver Deng
+                      <small><%= current_user.name %></small> 
+                      <small><%= current_user.contact_info %></small>
+                    </p>
+                  </li>
+                  
+                  <!-- Menu Footer-->
+          
+                  <li class="user-footer">
+                    <div class="pull-left">
+                        <%= link_to edit_user_path(current_user), class: "btn btn-default btn-flat" do %>
+                          <i class="btn btn-default btn-flat">
+                           </i>
+                          修改密码/信息
+                        <% end %>
+
+                    </div>
+                    <div class="pull-right">
+                        <%= link_to logout_path, method: "delete", confirm: "确定退出?", class: "btn btn-default btn-flat" do %>
+                          退出
+                        <% end %>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
