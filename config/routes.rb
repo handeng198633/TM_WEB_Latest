@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'signup'   => 'users#new'
   get 'login'    => 'sessions#new'
   post 'login'   => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
   
   resources :users
   resources :fitorders
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :finances
   resources :salescounts
 
-
+  get "/public/fonts" => redirect("/fonts")
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
