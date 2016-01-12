@@ -12,7 +12,6 @@
 //
 
 //= require jQuery-2.1.4.min
-//= require jquery_ujs
 //= require jquery-ui.min
 //= require bootstrap.min
 
@@ -28,19 +27,7 @@
 //= require bootstrap3-wysihtml5.all.min
 //= require jquery.slimscroll.min
 //= require fastclick.min
-//= require select2
-
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-
-//= require packageorders
-//= require fitorders
-//= require linelists
-//= require netprofits
-//= require traintickets
-//= require planetickets
-//= require finances
-//= require salescounts
+//= require select2.full
 
 //= require turbolinks
 
