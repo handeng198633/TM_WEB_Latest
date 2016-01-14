@@ -11,7 +11,8 @@
 // about supported directives.
 //
 
-//= require jquery.dataTables.min.js
+//= require jquery.dataTables.min
+//= require jquery.dataTables.bootstrap
 
 //= require packageorders
 //= require fitorders
