@@ -11,33 +11,12 @@
 // about supported directives.
 //
 
-<<<<<<< HEAD
-//= require jQuery-2.1.4.min
-//= require jquery_ujs
-//= require jquery-ui.min
-//= require bootstrap.min
-
-//= require raphael-min
-//= require morris.min
-//= require jquery.sparkline.min
-//= require jquery-jvectormap-1.2.2.min
-//= require jquery-jvectormap-world-mill-en
-//= require jquery.knob
-//= require moment.min
-//= require daterangepicker
-//= require bootstrap-datepicker
-//= require bootstrap3-wysihtml5.all.min
-//= require jquery.slimscroll.min
-//= require fastclick.min
-//= require select2
-=======
 //= require jquery.dataTables.min
 //= require jquery.dataTables.bootstrap
 
 //= require packageorders
 //= require fitorders
 //= require linelists
->>>>>>> 552c0c6d0e58aca1b7e5b982f30b18574d316636
 
 //= require turbolinks
 
