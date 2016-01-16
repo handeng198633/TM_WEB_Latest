@@ -11,6 +11,7 @@
 // about supported directives.
 //
 
+<<<<<<< HEAD
 //= require jQuery-2.1.4.min
 //= require jquery_ujs
 //= require jquery-ui.min
@@ -29,6 +30,14 @@
 //= require jquery.slimscroll.min
 //= require fastclick.min
 //= require select2
+=======
+//= require jquery.dataTables.min
+//= require jquery.dataTables.bootstrap
+
+//= require packageorders
+//= require fitorders
+//= require linelists
+>>>>>>> 552c0c6d0e58aca1b7e5b982f30b18574d316636
 
 //= require turbolinks
 
