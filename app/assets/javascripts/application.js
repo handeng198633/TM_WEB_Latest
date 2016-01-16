@@ -30,17 +30,5 @@
 //= require fastclick.min
 //= require select2
 
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-
-//= require packageorders
-//= require fitorders
-//= require linelists
-//= require netprofits
-//= require traintickets
-//= require planetickets
-//= require finances
-//= require salescounts
-
 //= require turbolinks
 
