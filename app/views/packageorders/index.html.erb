@@ -11,7 +11,7 @@
           <div class="widget-title"><%= link_to "新增", new_packageorder_path, class: "btn btn-primary" %>
             </div>
         <div class="widget-content nopadding">
-                <table id="packageorders" class="display" data-source="<%= packageorders_url(:format => "json") %>">
+                <table id="packageorders" class="display responsive no-wrap" data-source="<%= packageorders_url(:format => "json") %>">
                         <thead>
                                <tr>
                               <th>ID</th>
@@ -40,5 +40,4 @@
       </div>
     </div>
   </div>
-<script src="/assets/jquery-1.11.3.min.js"></script>
-<script src="/assets/jquery.dataTables.min.js"></script>
+

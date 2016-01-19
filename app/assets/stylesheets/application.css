@@ -25,6 +25,8 @@
 
 *= require jquery-ui
 *= require jquery.dataTables.bootstrap
+*= require jquery.dataTables.foundation
+*= require dataTables/extras/dataTables.responsive
 *= require dataTables/src/demo_table_jui
 */
 

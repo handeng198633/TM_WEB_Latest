@@ -13,6 +13,8 @@
 
 //= require jquery.dataTables.min
 //= require jquery.dataTables.bootstrap
+//= require jquery.dataTables.foundation
+//= require dataTables/extras/dataTables.responsive
 
 //= require packageorders
 //= require fitorders

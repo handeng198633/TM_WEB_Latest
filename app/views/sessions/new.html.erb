@@ -6,7 +6,7 @@
                           <!-- small box -->
                           <div class="small-box bg-aqua">
                             <div class="inner">
-                              <h3>150</h3>
+                              <h3><%= Packageorder.count %></h3>
                               <p>包团订单</p>
                             </div>
                             <div class="icon">
@@ -19,7 +19,7 @@
                           <!-- small box -->
                           <div class="small-box bg-green">
                             <div class="inner">
-                              <h3>53<sup style="font-size: 20px">%</sup></h3>
+                              <h3><%= Fitorder.count %></h3>
                               <p>散客订单</p>
                             </div>
                             <div class="icon">
@@ -32,7 +32,7 @@
                           <!-- small box -->
                           <div class="small-box bg-yellow">
                             <div class="inner">
-                              <h3>44</h3>
+                              <h3><%= Linelist.count %></h3>
                               <p>线路上传</p>
                             </div>
                             <div class="icon">
@@ -45,7 +45,7 @@
                           <!-- small box -->
                           <div class="small-box bg-red">
                             <div class="inner">
-                              <h3>65</h3>
+                              <h3>65<sup style="font-size: 20px">%</sup></h3>
                               <p>净利润表</p>
                             </div>
                             <div class="icon">
@@ -419,6 +419,36 @@
 
                       </section><!-- right col -->
                     </div><!-- /.row (main row) -->
+                          <script src="/assets/jQuery-2.1.4.min.js"></script>
+                          <!-- jQuery UI 1.11.4 -->
+                          <script src="/assets/jquery-ui.min.js"></script>
+                          <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+                          <script>
+                            $.widget.bridge('uibutton', $.ui.button);
+                          </script>
+                          <!-- Bootstrap 3.3.5 -->
+                          <script src="/assets/bootstrap.min.js"></script>
+                          <!-- Morris.js charts -->
+                          <script src="/assets/raphael-min.js"></script>
+                          <script src="/assets/morris.min.js"></script>
+                          <!-- Sparkline -->
+                          <script src="/assets/jquery.sparkline.min.js"></script>
+                          <!-- jvectormap -->
+                          <script src="/assets/jquery-jvectormap-1.2.2.min.js"></script>
+                          <script src="/assets/jquery-jvectormap-world-mill-en.js"></script>
+                          <!-- jQuery Knob Chart -->
+                          <script src="/assets/jquery.knob.js"></script>
+                          <!-- daterangepicker -->
+                          <script src="/assets/moment.min.js"></script>
+                          <script src="/assets/daterangepicker.js"></script>
+                          <!-- datepicker -->
+                          <script src="/assets/bootstrap-datepicker.js"></script>
+                          <!-- Bootstrap WYSIHTML5 -->
+                          <script src="/assets/bootstrap3-wysihtml5.all.min.js"></script>
+                          <!-- Slimscroll -->
+                          <script src="/assets/jquery.slimscroll.min.js"></script>
+                          <!-- FastClick -->
+                          <script src="/assets/fastclick.min.js"></script>
 
 <% else %>
   <body class="navbar-trans full-height hero hero-home">
