@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
 *= require bootstrap.min
 *= require font-awesome.min
 *= require ionicons.min
@@ -22,7 +23,6 @@
 *= require daterangepicker-bs3
 *= require bootstrap3-wysihtml5.min
 *= require select2
-
 *= require jquery-ui
 *= require jquery.dataTables.bootstrap
 *= require jquery.dataTables.foundation
