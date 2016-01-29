@@ -22,7 +22,7 @@
 *= require datepicker3
 *= require daterangepicker-bs3
 *= require bootstrap3-wysihtml5.min
-*= require select2
+*= select2
 *= require jquery-ui
 *= require jquery.dataTables.bootstrap
 *= require jquery.dataTables.foundation
