@@ -6,7 +6,7 @@ $.extend( true, $.fn.dataTable.defaults, {
 		"<'row'<'large-6 columns'i><'large-6 columns'p>>",
 	"sPaginationType": "foundation",
 	"oLanguage": {
-		"sLengthMenu": "_MENU_ records per page"
+		"sLengthMenu": "_MENU_ 记录/页"
 	}
 } );
 
