@@ -4,9 +4,9 @@ class PlaneticketsController < ApplicationController
 
   	def index
     	respond_to do |format|
-      	format.html {}
-      	format.json { render json: PlaneticketsDatatable.new(view_context) }
-        end
+      format.html {}
+      format.json { render json: PlaneticketsDatatable.new(view_context) }
+      end
     end
 
     def show
@@ -19,7 +19,7 @@ class PlaneticketsController < ApplicationController
 
     	def create
     		@planeticket = Planeticket.new(planeticket_params)
-        	@planeticket.record_person = current_user.name
+        @planeticket.record_person = current_user.name
     		if @planeticket.save
     			redirect_to planetickets_path
     		else
@@ -29,8 +29,26 @@ class PlaneticketsController < ApplicationController
 
     	def destroy
     		Planeticket.find(params[:id]).destroy
-        	redirect_to planetickets_path
+        redirect_to planetickets_path
     	end
+
+      def edit
+        @planeticket = Planeticket.find(params[:id])
+      end
+
+      def show
+        @planeticket = Planeticket.find(params[:id])
+      end
+
+      def update
+        @planeticket = Planeticket.find(params[:id])
+        if @planeticket.update_attributes(planeticket_params)
+          flash[:success] = "编辑成功"
+          redirect_to planetickets_path
+        else
+          render 'edit'
+        end
+      end
 
 
     	private

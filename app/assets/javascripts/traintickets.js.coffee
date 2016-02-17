@@ -1,7 +1,7 @@
 jQuery ->
   $('#traintickets').dataTable
     sPaginationType: "full_numbers"
-    bJQueryUI: true
+    responsive: true
     bProcessing: true
     bServerSide: true
     sAjaxSource: $('#traintickets').data('source')

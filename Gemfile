@@ -7,10 +7,7 @@ gem 'rails', '4.2.4'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 #gem 'bootstrap-sass', '3.3.1.0'
-gem 'bootstrap-sass', '3.3.3'
-
-
-
+gem 'bootstrap-sass', '3.3.5'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 

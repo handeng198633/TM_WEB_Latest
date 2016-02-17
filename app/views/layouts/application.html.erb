@@ -8,34 +8,7 @@
   <% if logged_in? %>
   	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   	  <title>忆游假期在线CMS | <%= yield(:title) %></title>
-	  <!-- Tell the browser to be responsive to screen width -->
 	    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	    			<!-- Bootstrap 3.3.5 -->
-				    <!-- <link rel="stylesheet" href="/assets/bootstrap.min.css"> -->
-				    <!-- Font Awesome -->
-				    <!-- <link rel="stylesheet" href="/assets/font-awesome.min.css">-->
-				    <!-- Ionicons -->
-				    <!-- <link rel="stylesheet" href="/assets/ionicons.min.css">-->
-				    <!-- Theme style -->
-				    <!-- <link rel="stylesheet" href="/assets/AdminLTE.min.css">-->
-				    <!-- AdminLTE Skins. Choose a skin from the css/skins
-				         folder instead of downloading all of them to reduce the load. -->
-				    <!-- <link rel="stylesheet" href="/assets/_all-skins.min.css">-->
-				    <!-- iCheck -->
-				    <!-- <link rel="stylesheet" href="/assets/blue.css">-->
-				    <!-- Morris chart -->
-				    <!-- <link rel="stylesheet" href="/assets/morris.css">-->
-				    <!-- jvectormap -->
-				    <!-- <link rel="stylesheet" href="/assets/jquery-jvectormap-1.2.2.css">-->
-				    <!-- Date Picker -->
-				    <!-- <link rel="stylesheet" href="/assets/datepicker3.css">-->
-				    <!-- Daterange picker -->
-				   <!--  <link rel="stylesheet" href="/assets/daterangepicker-bs3.css">-->
-				    <!-- bootstrap wysihtml5 - text editor -->
-				    <!-- <link rel="stylesheet" href="/assets/bootstrap3-wysihtml5.min.css"> -->
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -43,8 +16,6 @@
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 		
 		<link rel="stylesheet" href="/assets/style2.css">
-
-	  	<!--<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
 
 <% else %>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,74 +41,57 @@
 	
 </head>
   	<body>
-	
-
 		<% if logged_in? %>
-		<body class="hold-transition skin-blue sidebar-mini">
-			<div class="wrapper">
-				<%= render 'layouts/header' %>
-				<%= render 'layouts/sidebar' %>
-			    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-			        <section class="content-header">
-					          <h1>
-					            主页
-					            <small>控制面板</small>
-					          </h1>
-					          <ol class="breadcrumb">
-					            <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-					            <li class="active">主页</li>
-					          </ol>
-					        </section>
-
-					        <!-- Main content -->
-					        <section class="content">
-					          <!-- Small boxes (Stat box) -->
-					          <%= yield %>
-					        </section><!-- /.content -->
-      			</div><!-- /.content-wrapper -->
-		    
-				<%= render 'layouts/footer' %>
-		</div>
+			<body class="hold-transition skin-blue sidebar-mini">
+				<div class="wrapper">
+					<%= render 'layouts/header' %>
+					<%= render 'layouts/sidebar' %>
+				    <div class="content-wrapper">
+				    	<!-- Content Header -->
+				        <section class="content-header">
+						          <h1>
+						            主页
+						            <small>控制面板</small>
+						          </h1>
+						          <ol class="breadcrumb">
+						            <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+						            <li class="active">主页</li>
+						          </ol>
+						</section>
+						<!-- Main Content -->
+						<section class="content">
+						          <%= yield %>
+						</section>
+	      			</div>
+			    
+					<%= render 'layouts/footer' %>
+			</div>
 		<% else %>
-		<body>
-			<%= yield %>
+			<body>
+				<%= yield %>
 		<% end %>
 		<!--	<%= debug(params) if Rails.env.development? %> -->
+		<!-- base js -->
 			<script src="/assets/jQuery-2.1.4.min.js"></script>
-		    <!-- jQuery UI 1.11.4 -->
 		    <script src="/assets/jquery-ui.min.js"></script>
-		    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 		    <script>
 		      $.widget.bridge('uibutton', $.ui.button);
 		    </script>
-		    <!-- Bootstrap 3.3.5 -->
 		    <script src="/assets/bootstrap.min.js"></script>
-		    <!-- Morris.js charts -->
 		    <script src="/assets/raphael-min.js"></script>
 		    <script src="/assets/morris.min.js"></script>
-		    <!-- Sparkline -->
 		    <script src="/assets/jquery.sparkline.min.js"></script>
-		    <!-- jvectormap -->
 		    <script src="/assets/jquery-jvectormap-1.2.2.min.js"></script>
 		    <script src="/assets/jquery-jvectormap-world-mill-en.js"></script>
-		    <!-- jQuery Knob Chart -->
 		    <script src="/assets/jquery.knob.js"></script>
-		    <!-- daterangepicker -->
 		    <script src="/assets/moment.min.js"></script>
 		    <script src="/assets/daterangepicker.js"></script>
-		    <!-- datepicker -->
 		    <script src="/assets/bootstrap-datepicker.js"></script>
-		    <!-- Bootstrap WYSIHTML5 -->
-		    <script src="/assets/bootstrap3-wysihtml5.all.min.js"></script>
-		    <!-- Slimscroll -->
 		    <script src="/assets/jquery.slimscroll.min.js"></script>
-		    <!-- FastClick -->
 		    <script src="/assets/fastclick.min.js"></script>
-		    <!-- AdminLTE App -->
 			<script src="/assets/app.min.js"></script>
 		   	<script src="/assets/select2.js"></script>
-		    
+		<!-- datatable related js -->   
 		    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	</body>
 </html>

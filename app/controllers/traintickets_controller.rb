@@ -29,8 +29,26 @@ class TrainticketsController < ApplicationController
 
     	def destroy
     		Trainticket.find(params[:id]).destroy
-        	redirect_to traintickets_path
+        redirect_to traintickets_path
     	end
+
+      def edit
+        @trainticket = Trainticket.find(params[:id])
+      end
+
+      def show
+        @trainticket = Trainticket.find(params[:id])
+      end
+
+      def update
+        @trainticket = Trainticket.find(params[:id])
+        if @trainticket.update_attributes(trainticket_params)
+          flash[:success] = "编辑成功"
+          redirect_to traintickets_path
+        else
+          render 'edit'
+        end
+      end
 
 
     	private

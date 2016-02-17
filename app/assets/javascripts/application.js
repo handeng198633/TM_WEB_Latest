@@ -19,6 +19,8 @@
 //= require packageorders
 //= require fitorders
 //= require linelists
+//= require planetickets
+//= require traintickets
 
 //= require turbolinks
 
