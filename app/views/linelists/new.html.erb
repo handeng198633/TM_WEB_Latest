@@ -37,7 +37,11 @@
 	            					</div>
 
 	            					<div class="control-group">
-	              						<%= f.label :line_info, "线路信息" %>
+	            						<%= f.label :line_info, "线路信息" %>
+	            						<div class="form-field-lines">
+	            							<%= f.select :line_info, collection: Line.line_names %>
+	            						</div>
+	            						<%= link_to ' + 线路信息', new_line_path, remote: true %>
 	              						<div class="controls">
 	                							<%= f.text_field :line_info, placeholder: "请输入线路具体信息。。", class: "span11" %>
 	              						</div>

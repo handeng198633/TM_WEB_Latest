@@ -1,0 +1,37 @@
+<div id="content">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-md-12">
+				<div class="widget-box">
+					<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          					<h5>请依次输入具体信息</h5>
+        			</div>
+        			<div class="widget-content">
+        				<%= form_for(Line.new) do |f| %>
+        					<%= render 'shared/error_messages', object: f.object %>
+        						<div class="control-group">
+	              						<%= f.label :line_name, "线路名称:" %>
+	              						<div class="controls">
+	                							<%= f.text_field :group_number, placeholder: "请输入线路的具体名称。。" %>
+	              						</div>
+	            				</div>
+	            				<div class="control-group">
+	              						<%= f.label :line_day, "天数:" %>
+	              						<div class="controls">
+	                							<%= f.number_field(:line_day, in: 0..100, step: 1 ) %>
+												<span class="add-on">天</span>
+	              						</div>
+	            				</div>
+	            				<div class="control-group">
+	              						<%= f.label :detail_info, "具体信息:" %>
+	              						<div class="controls">
+	                							<%= f.text_field :detail_info, placeholder: "线路的具体信息，行程。。" %>
+	              						</div>
+	            				</div>
+        				<% end %>
+        			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

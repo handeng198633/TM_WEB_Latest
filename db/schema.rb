@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151230031241) do
+ActiveRecord::Schema.define(version: 20160321090400) do
 
   create_table "finances", force: :cascade do |t|
     t.datetime "out_date"
@@ -72,6 +72,14 @@ ActiveRecord::Schema.define(version: 20151230031241) do
   end
 
   add_index "linelists", ["line_id", "created_at"], name: "index_linelists_on_line_id_and_created_at"
+
+  create_table "lines", force: :cascade do |t|
+    t.string   "line_name"
+    t.integer  "line_day"
+    t.text     "detail_info"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "netprofits", force: :cascade do |t|
     t.text     "month"

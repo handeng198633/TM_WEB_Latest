@@ -10,12 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-//= require jquery.dataTables.min
-//= require jquery.dataTables.bootstrap
-//= require jquery.dataTables.foundation
-//= require dataTables/extras/dataTables.responsive
-
+//= require bootbox.min
 //= require packageorders
 //= require fitorders
 //= require linelists
